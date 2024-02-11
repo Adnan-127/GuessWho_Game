@@ -1,0 +1,153 @@
+* {
+  color: #222;
+}
+
+body {
+  background-color: #CAD3C8 !important;
+}
+
+.container {
+  background-color: #40739e;
+  position: relative;
+}
+
+.container .board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 120px;
+  height: 138px;
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-inner.flip-action {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 25px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #fbc531;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #e1b12c;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back .wrong {
+  font-size: 225px;
+  color: #EA2027;
+  position: absolute;
+  top: -85%;
+  right: -29%;
+  transform: rotate(45deg);
+  cursor: default;
+}
+
+.flip-card-front img {
+  width: 95px;
+}
+
+.container .choose-one {
+  text-align: center;
+}
+
+.container .choose-one .form-check-lable {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.container .character {
+  text-align: center;
+}
+
+.container .character img {
+  width: 70px;
+  margin-top: 8px;
+  transition: .5s;
+}
+
+.container .character img:hover {
+  transform: scale(1.5);
+}
+
+@media (max-width: 991px) {
+  .flip-card {
+    width: 95px;
+    height: 123px;
+  }
+
+  .flip-card-front img {
+    width: 85px;
+  }
+
+  .flip-card-back .wrong {
+    font-size: 190px;
+    top: -79%;
+    right: -35%;
+  }
+}
+
+@media (max-width: 767px) {
+  .flip-card {
+    width: 85px;
+    height: 101px;
+  }
+
+  .flip-card-front img {
+    width: 70px;
+  }
+
+  .flip-card-back .wrong {
+    font-size: 180px;
+    top: -97%;
+    right: -39%;
+  }
+}
+
+@media (max-width: 650px) {
+  .flip-card {
+    width: 65px;
+    height: 73px;
+  }
+
+  .flip-card-front img {
+    width: 50px;
+  }
+
+  .flip-card-back .wrong {
+    font-size: 125px;
+    top: -92%;
+    right: -32%;
+  }
+}
