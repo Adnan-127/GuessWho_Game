@@ -62,6 +62,7 @@ body {
   background-color: #e1b12c;
   color: white;
   transform: rotateY(180deg);
+  overflow: hidden;
 }
 
 .flip-card-back .wrong {
