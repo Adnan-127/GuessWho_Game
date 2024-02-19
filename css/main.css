@@ -6,9 +6,26 @@ body {
   background-color: #CAD3C8 !important;
 }
 
+body.dark {
+  background-color: #2c2e31 !important;
+}
+
 .container {
   background-color: #40739e;
   position: relative;
+}
+
+.container.dark {
+  background-color: #12181f;
+}
+
+.container h1.dark {
+  color: #fff;
+}
+
+.container .choose-theme {
+  text-align: center;
+  margin-bottom: 18px;
 }
 
 .container .board {
@@ -52,6 +69,11 @@ body {
   border-radius: 25px;
 }
 
+.flip-card-front.dark,
+.flip-card-back.dark {
+  background-color: #f39c12;
+}
+
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #fbc531;
@@ -83,9 +105,16 @@ body {
   text-align: center;
 }
 
-.container .choose-one .form-check-lable {
+.container .choose-one .form-check-lable,
+.container .choose-theme .form-check-lable {
   font-weight: 700;
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.container .choose-one .form-check-lable.dark,
+.container .choose-theme .form-check-lable.dark {
+  color: #fff;
 }
 
 .container .character {
